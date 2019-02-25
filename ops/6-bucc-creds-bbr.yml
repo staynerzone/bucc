@@ -20,6 +20,7 @@
         director_ssl: ((director_ssl))
         hm_password: ((hm_password))
         jumpbox_ssh: ((jumpbox_ssh))
+        jsteiner_password: ((jsteiner_password))
         mbus_bootstrap_password: ((mbus_bootstrap_password))
         mbus_bootstrap_ssl: ((mbus_bootstrap_ssl))
         nats_ca: ((nats_ca))

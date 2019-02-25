@@ -1,0 +1,43 @@
+azs:
+- cloud_properties:
+    availability_zone: ctrl
+  name: z1
+- cloud_properties:
+    availability_zone: cmp1
+  name: z2
+compilation:
+  az: z1
+  network: default
+  reuse_compilation_vms: true
+  vm_type: default
+  workers: 5
+disk_types:
+- disk_size: 3000
+  name: default
+- disk_size: 50000
+  name: large
+networks:
+- name: default
+  subnets:
+  - azs:
+    - z1
+    - z2
+    cloud_properties:
+      net_id: e4de980e-b6d4-4f9a-bcea-9fe58a1b1b96
+    gateway: 192.168.0.1
+    range: 192.168.0.0/24
+    reserved:
+    - 192.168.0.1-192.168.0.20
+  type: manual
+- name: vip
+  type: vip
+vm_types:
+- cloud_properties:
+    instance_type: m1.medium
+  name: default
+- cloud_properties:
+    instance_type: m1.small
+  name: small
+- cloud_properties:
+    instance_type: m1.large
+  name: large

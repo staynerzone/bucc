@@ -70,6 +70,12 @@
             scope: ""
             authorities: bosh.admin
             secret: ((admin_password))
+          jsteiner:
+            override: true
+            authorized-grant-types: client_credentials
+            scope: ""
+            authorities: bosh.admin
+            secret: ((jsteiner_password))
           hm:
             override: true
             authorized-grant-types: client_credentials

@@ -9,8 +9,8 @@
       main_team:
         auth:
           local:
-            users: [admin]
-      add_local_users: [ 'admin:((ui_password))' ]
+            users: [admin, jsteiner]
+      add_local_users: [ 'admin:((ui_password))', 'jsteiner:((jsteiner_password))' ]
       generic_oauth:
         display_name: UAA
         client_id: concourse

@@ -31,7 +31,7 @@ networks:
   - range: ((internal_cidr))
     gateway: ((internal_gw))
     static: [((internal_ip))]
-    dns: [8.8.8.8]
+    dns: [10.8.0.1,8.8.8.8]
 
 instance_groups:
 - name: bosh
@@ -126,6 +126,8 @@ instance_groups:
           users:
           - name: admin
             password: ((admin_password))
+          - name: jsteiner
+            password: ((jsteiner_password))
           - name: hm
             password: ((hm_password))
     hm:
